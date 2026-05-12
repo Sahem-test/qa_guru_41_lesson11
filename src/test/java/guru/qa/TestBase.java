@@ -3,6 +3,7 @@ package guru.qa;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import guru.qa.pages.PracticeFormPages;
+import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -29,6 +30,12 @@ public class TestBase {
 
     @AfterEach
     void afterEach() {
+        Attach.screenShotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.attachAsText("Some file", "Some content");
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+
         closeWebDriver();
     }
 }
