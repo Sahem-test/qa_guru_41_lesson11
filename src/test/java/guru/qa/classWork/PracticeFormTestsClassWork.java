@@ -9,9 +9,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class PracticeFormTestsWithJenkins {
+public class PracticeFormTestsClassWork {
     @BeforeAll
-    static void beforeAll(){
+    static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.browserVersion = "128.0";
