@@ -23,8 +23,8 @@ public class TestBase {
     static void setup() {
         Configuration.baseUrl = "https://qa-guru.github.io/one-page-form";
         Configuration.browserSize = "1920x1080";
-       /* Configuration.browserVersion = "127.0";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";*/
+        Configuration.browserVersion = "127.0";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 
     @AfterEach
