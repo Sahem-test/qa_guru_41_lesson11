@@ -1,6 +1,8 @@
 package guru.qa.classWork;
 
 import com.codeborne.selenide.Configuration;
+import helpers.Attach;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -55,5 +57,10 @@ public class PracticeFormTestsClassWork {
         $(".modal-body").shouldHave(text("test.txt"));
         $(".modal-body").shouldHave(text("new address"));
         $(".modal-body").shouldHave(text("NCR Delhi"));
+    }
+
+    @AfterEach
+    void afterEach() {
+        closeWebDriver();
     }
 }
